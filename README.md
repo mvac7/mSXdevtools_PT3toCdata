@@ -13,14 +13,14 @@ License:      GNU GPL v2
 ---
 ## About tMSgfX
 
-Vortex PT3 to C data Converter Tool for (PT3 Player MSX SDCC Library)[https://github.com/mvac7/SDCC_PT3player] (fR3eL Project) or other libraries (that use the same generated data format).
+Vortex PT3 to C data Converter Tool for [PT3 Player MSX SDCC Library](https://github.com/mvac7/SDCC_PT3player) (fR3eL Project) or other libraries (that use the same generated data format).
 
-
+Vortex Tracker and Vortex PT3 Player are developed by Sergey Bulba. [(Vortex Project)](https://bulba.untergrund.net/vortex_e.htm)]
 
 ---
 ## License
 
-Copyleft (C) 2020 mvac7
+Copyright (C) 2021 mvac7
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
