@@ -1,5 +1,8 @@
 ﻿Public NotInheritable Class AboutForm
 
+    Private Const License_URL As String = "http://www.gnu.org/licenses/gpl-2.0-standalone.html"
+
+
     Private Sub AboutBox1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         ' Establezca el título del formulario.
         Dim ApplicationTitle As String
@@ -15,12 +18,16 @@
         Me.LabelProductName.Text = My.Application.Info.ProductName
         Me.LabelVersion.Text = String.Format("Version {0}", My.Application.Info.Version.ToString)
         Me.LabelCopyright.Text = My.Application.Info.Copyright
-        Me.LabelCompanyName.Text = My.Application.Info.CompanyName
-        Me.TextBoxDescription.Text = My.Application.Info.Description + vbNewLine + vbNewLine + "Vortex Tracker and Vortex PT3 Player are developed by Sergey Bulba"
+        'Me.LabelCompanyName.Text = My.Application.Info.CompanyName
+        'Me.TextBoxDescription.Text = My.Application.Info.Description + vbNewLine
     End Sub
 
     Private Sub OKButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OKButton.Click
         Me.Close()
+    End Sub
+
+    Private Sub LabelLicense_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LabelLicense.LinkClicked
+        System.Diagnostics.Process.Start(License_URL)
     End Sub
 
 End Class

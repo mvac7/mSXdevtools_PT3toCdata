@@ -2,7 +2,25 @@
 Imports System.Xml
 Imports System.Windows.Forms
 
-
+''' <summary>
+''' PT3toCdata Converter Tool
+''' Copyright mvac7 (aka aorante) 2021
+''' 
+''' Vortex PT3 to C data Converter Tool for PT3 Player MSX SDCC Library (fR3eL Project) 
+''' or other libraries (that use the same generated data format).
+''' 
+''' Vortex Tracker And Vortex PT3 Player are developed by Sergey Bulba.
+''' 
+''' This program Is free software; you can redistribute it And/Or modify it under the terms Of 
+''' the GNU General Public License As published by the Free Software Foundation; either version 2 Of the License, Or (at your Option) any later version.
+''' 
+''' This program Is distributed In the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+''' without even the implied warranty Of MERCHANTABILITY Or FITNESS For A PARTICULAR PURPOSE.  See the GNU General Public License For more details.
+''' 
+''' You should have received a copy Of the GNU General Public License along With this program.  
+''' If Not, see www.gnu.org/licenses/
+''' 
+''' </summary>
 Public Class PT3toCdataWin
 
     Private _txtPath As String

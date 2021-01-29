@@ -17,7 +17,7 @@ Partial Class AboutForm
     Friend WithEvents TableLayoutPanel As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents LabelProductName As System.Windows.Forms.Label
     Friend WithEvents LabelVersion As System.Windows.Forms.Label
-    Friend WithEvents LabelCompanyName As System.Windows.Forms.Label
+    Friend WithEvents LabelLicense As System.Windows.Forms.LinkLabel
     Friend WithEvents TextBoxDescription As System.Windows.Forms.TextBox
     Friend WithEvents OKButton As System.Windows.Forms.Button
     Friend WithEvents LabelCopyright As System.Windows.Forms.Label
@@ -35,7 +35,7 @@ Partial Class AboutForm
         Me.LabelProductName = New System.Windows.Forms.Label()
         Me.LabelVersion = New System.Windows.Forms.Label()
         Me.LabelCopyright = New System.Windows.Forms.Label()
-        Me.LabelCompanyName = New System.Windows.Forms.Label()
+        Me.LabelLicense = New System.Windows.Forms.LinkLabel()
         Me.TextBoxDescription = New System.Windows.Forms.TextBox()
         Me.OKButton = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -47,12 +47,15 @@ Partial Class AboutForm
         '
         'TableLayoutPanel
         '
+        Me.TableLayoutPanel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TableLayoutPanel.ColumnCount = 1
         Me.TableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel.Controls.Add(Me.LabelProductName, 0, 0)
         Me.TableLayoutPanel.Controls.Add(Me.LabelVersion, 0, 1)
         Me.TableLayoutPanel.Controls.Add(Me.LabelCopyright, 0, 2)
-        Me.TableLayoutPanel.Controls.Add(Me.LabelCompanyName, 0, 3)
+        Me.TableLayoutPanel.Controls.Add(Me.LabelLicense, 0, 3)
         Me.TableLayoutPanel.Controls.Add(Me.TextBoxDescription, 0, 4)
         Me.TableLayoutPanel.Controls.Add(Me.OKButton, 0, 5)
         Me.TableLayoutPanel.Location = New System.Drawing.Point(157, 10)
@@ -65,7 +68,7 @@ Partial Class AboutForm
         Me.TableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel.Size = New System.Drawing.Size(370, 346)
+        Me.TableLayoutPanel.Size = New System.Drawing.Size(420, 346)
         Me.TableLayoutPanel.TabIndex = 0
         '
         'LabelProductName
@@ -75,7 +78,7 @@ Partial Class AboutForm
         Me.LabelProductName.Location = New System.Drawing.Point(8, 0)
         Me.LabelProductName.Margin = New System.Windows.Forms.Padding(8, 0, 4, 0)
         Me.LabelProductName.Name = "LabelProductName"
-        Me.LabelProductName.Size = New System.Drawing.Size(358, 34)
+        Me.LabelProductName.Size = New System.Drawing.Size(408, 34)
         Me.LabelProductName.TabIndex = 0
         Me.LabelProductName.Text = "Nombre de producto"
         '
@@ -85,7 +88,7 @@ Partial Class AboutForm
         Me.LabelVersion.Location = New System.Drawing.Point(8, 34)
         Me.LabelVersion.Margin = New System.Windows.Forms.Padding(8, 0, 4, 0)
         Me.LabelVersion.Name = "LabelVersion"
-        Me.LabelVersion.Size = New System.Drawing.Size(358, 28)
+        Me.LabelVersion.Size = New System.Drawing.Size(408, 28)
         Me.LabelVersion.TabIndex = 0
         Me.LabelVersion.Text = "Versión"
         '
@@ -95,19 +98,20 @@ Partial Class AboutForm
         Me.LabelCopyright.Location = New System.Drawing.Point(8, 62)
         Me.LabelCopyright.Margin = New System.Windows.Forms.Padding(8, 0, 4, 0)
         Me.LabelCopyright.Name = "LabelCopyright"
-        Me.LabelCopyright.Size = New System.Drawing.Size(358, 28)
+        Me.LabelCopyright.Size = New System.Drawing.Size(408, 28)
         Me.LabelCopyright.TabIndex = 0
         Me.LabelCopyright.Text = "Copyright"
         '
-        'LabelCompanyName
+        'LabelLicense
         '
-        Me.LabelCompanyName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LabelCompanyName.Location = New System.Drawing.Point(8, 90)
-        Me.LabelCompanyName.Margin = New System.Windows.Forms.Padding(8, 0, 4, 0)
-        Me.LabelCompanyName.Name = "LabelCompanyName"
-        Me.LabelCompanyName.Size = New System.Drawing.Size(358, 28)
-        Me.LabelCompanyName.TabIndex = 0
-        Me.LabelCompanyName.Text = "Nombre de la compañía"
+        Me.LabelLicense.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LabelLicense.Location = New System.Drawing.Point(8, 90)
+        Me.LabelLicense.Margin = New System.Windows.Forms.Padding(8, 0, 4, 0)
+        Me.LabelLicense.Name = "LabelLicense"
+        Me.LabelLicense.Size = New System.Drawing.Size(408, 28)
+        Me.LabelLicense.TabIndex = 98
+        Me.LabelLicense.TabStop = True
+        Me.LabelLicense.Text = "GNU GPL v2"
         '
         'TextBoxDescription
         '
@@ -118,8 +122,8 @@ Partial Class AboutForm
         Me.TextBoxDescription.Name = "TextBoxDescription"
         Me.TextBoxDescription.ReadOnly = True
         Me.TextBoxDescription.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBoxDescription.Size = New System.Drawing.Size(358, 191)
-        Me.TextBoxDescription.TabIndex = 0
+        Me.TextBoxDescription.Size = New System.Drawing.Size(408, 191)
+        Me.TextBoxDescription.TabIndex = 99
         Me.TextBoxDescription.TabStop = False
         Me.TextBoxDescription.Text = resources.GetString("TextBoxDescription.Text")
         '
@@ -127,11 +131,11 @@ Partial Class AboutForm
         '
         Me.OKButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.OKButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.OKButton.Location = New System.Drawing.Point(266, 318)
+        Me.OKButton.Location = New System.Drawing.Point(316, 318)
         Me.OKButton.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.OKButton.Name = "OKButton"
         Me.OKButton.Size = New System.Drawing.Size(100, 25)
-        Me.OKButton.TabIndex = 0
+        Me.OKButton.TabIndex = 1
         Me.OKButton.Text = "Ok"
         '
         'Panel1
@@ -144,7 +148,7 @@ Partial Class AboutForm
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(150, 361)
-        Me.Panel1.TabIndex = 2
+        Me.Panel1.TabIndex = 99
         '
         'IconPictureBox
         '
@@ -158,11 +162,10 @@ Partial Class AboutForm
         '
         'AboutForm
         '
-        Me.AcceptButton = Me.OKButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.OKButton
-        Me.ClientSize = New System.Drawing.Size(534, 361)
+        Me.ClientSize = New System.Drawing.Size(584, 361)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TableLayoutPanel)
         Me.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
