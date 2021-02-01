@@ -11,7 +11,7 @@ License:      GNU GPL v2
                                                                
 
 ---
-## About tMSgfX
+## About PT3toCdata
 
 Vortex PT3 to C data Converter Tool for [PT3 Player MSX SDCC Library](https://github.com/mvac7/SDCC_PT3player) (fR3eL Project) or other libraries (that use the same generated data format).
 
@@ -39,8 +39,6 @@ You should have received a copy of the GNU General Public License along with thi
 
  
 
- 
-
 ---
 ## Requirements:
 
@@ -48,7 +46,28 @@ You should have received a copy of the GNU General Public License along with thi
 * Display with minimum resolution: XVGA (1024x768)
 
 
+
 ---
 ## Acknowledgements:
 
-To all those who share knowledge.
+I want to give a special thanks to all those who freely share their knowledge with the MSX developer community.
+
+* S.V.Bulba > [(WEB)](http://bulba.at.kz) 
+* Alfonso D. C. aka Dioniso
+* MSXKun/Paxanga soft > [(WEB)](http://paxangasoft.retroinvaders.com/)
+* Sapphire/Z80ST > [(WEB)](http://z80st.auic.es/)
+* Makinavaja for his music. [(SoundCloud)](https://soundcloud.com/makimsx) 
+* Avelino Herrera > [(WEB)](http://msx.atlantes.org/index_es.html)
+* Nerlaska > [(Blog)](http://albertodehoyonebot.blogspot.com.es)
+* Marq/Lieves!Tuore > [(Marq)](http://www.kameli.net/marq/) [(Lieves!Tuore)](http://www.kameli.net/lt/)
+* [Fubukimaru](https://github.com/Fubukimaru) > [(Blog)](http://www.gamerachan.org/fubu/)
+* Andrear > [(Blog)](http://andrear.altervista.org/home/msxsoftware.php)
+* Ramones > [(MSXblog)](https://www.msxblog.es/tutoriales-de-programacion-en-ensamblador-ramones/) - [(MSXbanzai)](http://msxbanzai.tni.nl/dev/faq.html)
+* Eric Boez > [(gitHub)](https://github.com/ericb59)
+* MSX Assembly Page > [(WEB)](http://map.grauw.nl/resources/msxbios.php)
+* Portar MSX Tech Doc > [(WEB)](https://problemkaputt.de/portar.htm)
+* MSX Resource Center > [(WEB)](http://www.msx.org/)
+* Karoshi MSX Community (RIP 2007-2020)
+* BlueMSX emulator >> [(WEB)](http://www.bluemsx.com/)
+* OpenMSX emulator >> [(WEB)](http://openmsx.sourceforge.net/)
+* Meisei emulator >> ?

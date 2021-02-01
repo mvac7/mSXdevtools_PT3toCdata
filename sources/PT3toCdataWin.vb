@@ -153,7 +153,10 @@ Public Class PT3toCdataWin
 
         Array.Copy(Me.aFileData, initValue, outputData, 0, fileOutputSize)
 
-        OutputText.Text = "// " + Me.TrackerName + vbNewLine + vbNewLine
+        OutputText.Text = "// " + Me.TrackerName + vbNewLine
+        OutputText.Text += "// Song name: " + Me.SongName + vbNewLine
+        OutputText.Text += "// Song author: " + Me.SongAuthor + vbNewLine
+        OutputText.Text += "// Note Table: " + CStr(Me.SongNoteTable) + vbNewLine + vbNewLine
 
         If SongInfo_CheckBox.Checked Then
             OutputText.Text += "const char " + labelName + "_name[] = " + Chr(34) + Me.SongName + Chr(34) + ";" + vbNewLine
@@ -162,7 +165,6 @@ Public Class PT3toCdataWin
 
         comments.Add(Path.GetFileName(Me.PT3_Path))
         comments.Add("Length: " + CStr(outputData.Length))
-        comments.Add("Note Table: " + CStr(Me.SongNoteTable))
         If Me.HeaderCheckBox.Checked Then
             comments.Add("Not contain the 100 Byte header")
         End If
