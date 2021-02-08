@@ -25,7 +25,7 @@ Public Class PT3toCdataWin
 
     Private _txtPath As String
 
-    Private aFileData As Byte()
+    Private PT3_FileData As Byte()
 
     Private TrackerName As String
 
@@ -76,7 +76,7 @@ Public Class PT3toCdataWin
 
         Dim conta As Integer = 7
 
-        Dim filesize As Long = aFile.Length
+        Dim filesize As Long = aFile.Length - 1
 
         If filesize > 65536 Then
             Return Nothing
@@ -101,15 +101,15 @@ Public Class PT3toCdataWin
         Dim songNameASCII(31) As Byte
         Dim songAuthorASCII(31) As Byte
 
-        Array.Copy(Me.aFileData, 0, trackerNameASCII, 0, 22)
-        Array.Copy(Me.aFileData, 30, songNameASCII, 0, 32)
-        Array.Copy(Me.aFileData, 66, songAuthorASCII, 0, 32)
+        Array.Copy(Me.PT3_FileData, 0, trackerNameASCII, 0, 22)
+        Array.Copy(Me.PT3_FileData, 30, songNameASCII, 0, 32)
+        Array.Copy(Me.PT3_FileData, 66, songAuthorASCII, 0, 32)
 
         Me.TrackerName = System.Text.Encoding.ASCII.GetString(trackerNameASCII)
         Me.SongName = System.Text.Encoding.ASCII.GetString(songNameASCII)
         Me.SongAuthor = System.Text.Encoding.ASCII.GetString(songAuthorASCII)
 
-        Me.SongNoteTable = CInt(Me.aFileData(99))
+        Me.SongNoteTable = CInt(Me.PT3_FileData(99))
 
         Me.SongName = Me.SongName.Trim()
         Me.SongAuthor = Me.SongAuthor.Trim()
@@ -138,7 +138,7 @@ Public Class PT3toCdataWin
         Dim initValue As Integer = 0
 
 
-        If aFileData Is Nothing Then
+        If Me.PT3_FileData Is Nothing Then
             Exit Sub
         End If
 
@@ -147,11 +147,11 @@ Public Class PT3toCdataWin
             initValue = 100
         End If
 
-        fileOutputSize = (aFileData.Length - initValue) - 1
+        fileOutputSize = (Me.PT3_FileData.Length - initValue)
 
         ReDim outputData(fileOutputSize - 1)
 
-        Array.Copy(Me.aFileData, initValue, outputData, 0, fileOutputSize)
+        Array.Copy(Me.PT3_FileData, initValue, outputData, 0, fileOutputSize)
 
         OutputText.Text = "// " + Me.TrackerName + vbNewLine
         OutputText.Text += "// Song name: " + Me.SongName + vbNewLine
@@ -212,7 +212,7 @@ Public Class PT3toCdataWin
 
         Me.PT3_Path = filePath
 
-        Me.aFileData = LoadBinary(filePath)
+        Me.PT3_FileData = LoadBinary(filePath)
         SetTitle(Path.GetFileName(filePath))
         InitFileData()
 

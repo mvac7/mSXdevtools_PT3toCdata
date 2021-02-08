@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class AboutForm
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -38,10 +38,8 @@ Partial Class AboutForm
         Me.LabelLicense = New System.Windows.Forms.LinkLabel()
         Me.TextBoxDescription = New System.Windows.Forms.TextBox()
         Me.OKButton = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.IconPictureBox = New System.Windows.Forms.PictureBox()
         Me.TableLayoutPanel.SuspendLayout()
-        Me.Panel1.SuspendLayout()
         CType(Me.IconPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -50,6 +48,7 @@ Partial Class AboutForm
         Me.TableLayoutPanel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel.ColumnCount = 1
         Me.TableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel.Controls.Add(Me.LabelProductName, 0, 0)
@@ -68,7 +67,7 @@ Partial Class AboutForm
         Me.TableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel.Size = New System.Drawing.Size(420, 346)
+        Me.TableLayoutPanel.Size = New System.Drawing.Size(420, 386)
         Me.TableLayoutPanel.TabIndex = 0
         '
         'LabelProductName
@@ -115,14 +114,16 @@ Partial Class AboutForm
         '
         'TextBoxDescription
         '
+        Me.TextBoxDescription.BackColor = System.Drawing.Color.WhiteSmoke
         Me.TextBoxDescription.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBoxDescription.ForeColor = System.Drawing.Color.Black
         Me.TextBoxDescription.Location = New System.Drawing.Point(8, 121)
         Me.TextBoxDescription.Margin = New System.Windows.Forms.Padding(8, 3, 4, 3)
         Me.TextBoxDescription.Multiline = True
         Me.TextBoxDescription.Name = "TextBoxDescription"
         Me.TextBoxDescription.ReadOnly = True
         Me.TextBoxDescription.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBoxDescription.Size = New System.Drawing.Size(408, 191)
+        Me.TextBoxDescription.Size = New System.Drawing.Size(408, 231)
         Me.TextBoxDescription.TabIndex = 99
         Me.TextBoxDescription.TabStop = False
         Me.TextBoxDescription.Text = resources.GetString("TextBoxDescription.Text")
@@ -130,25 +131,16 @@ Partial Class AboutForm
         'OKButton
         '
         Me.OKButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.OKButton.BackColor = System.Drawing.Color.LightGray
         Me.OKButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.OKButton.Location = New System.Drawing.Point(316, 318)
+        Me.OKButton.ForeColor = System.Drawing.Color.Black
+        Me.OKButton.Location = New System.Drawing.Point(316, 358)
         Me.OKButton.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.OKButton.Name = "OKButton"
         Me.OKButton.Size = New System.Drawing.Size(100, 25)
         Me.OKButton.TabIndex = 1
         Me.OKButton.Text = "Ok"
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.LightBlue
-        Me.Panel1.BackgroundImage = Global.mSXdevtools.PT3toCdata.My.Resources.Resources.BG_bluewhite
-        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel1.Controls.Add(Me.IconPictureBox)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(150, 361)
-        Me.Panel1.TabIndex = 99
+        Me.OKButton.UseVisualStyleBackColor = False
         '
         'IconPictureBox
         '
@@ -164,9 +156,11 @@ Partial Class AboutForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.mSXdevtools.PT3toCdata.My.Resources.Resources.BG_bluewhite
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.CancelButton = Me.OKButton
-        Me.ClientSize = New System.Drawing.Size(584, 361)
-        Me.Controls.Add(Me.Panel1)
+        Me.ClientSize = New System.Drawing.Size(584, 401)
+        Me.Controls.Add(Me.IconPictureBox)
         Me.Controls.Add(Me.TableLayoutPanel)
         Me.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
@@ -180,12 +174,10 @@ Partial Class AboutForm
         Me.Text = "About PT3toCdata"
         Me.TableLayoutPanel.ResumeLayout(False)
         Me.TableLayoutPanel.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
         CType(Me.IconPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents IconPictureBox As PictureBox
-    Friend WithEvents Panel1 As Panel
 End Class

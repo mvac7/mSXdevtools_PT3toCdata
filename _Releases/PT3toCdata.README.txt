@@ -1,6 +1,6 @@
 PT3toCdata Converter Tool
 
-Version:      1.0.2b (01/Feb/2021)    
+Version:      1.0.3b (08/Feb/2021)    
 Author:       mvac7 (aka aorante)
 Architecture: Microsoft .Net framework 4.0
 License:      GNU GPL v2  

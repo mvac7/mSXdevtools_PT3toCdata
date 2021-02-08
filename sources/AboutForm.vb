@@ -19,7 +19,11 @@
         Me.LabelVersion.Text = String.Format("Version {0}", My.Application.Info.Version.ToString)
         Me.LabelCopyright.Text = My.Application.Info.Copyright
         'Me.LabelCompanyName.Text = My.Application.Info.CompanyName
-        'Me.TextBoxDescription.Text = My.Application.Info.Description + vbNewLine
+        Me.TextBoxDescription.Text = My.Application.Info.Description + vbNewLine + vbNewLine
+        Me.TextBoxDescription.Text += "Vortex Tracker and Vortex PT3 Player are developed by Sergey Bulba." + vbNewLine + vbNewLine
+        Me.TextBoxDescription.Text += "This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version." + vbNewLine + vbNewLine
+        Me.TextBoxDescription.Text += "This program Is distributed In the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY Or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details." + vbNewLine + vbNewLine
+        Me.TextBoxDescription.Text += "You should have received a copy Of the GNU General Public License along With this program." + vbNewLine + "If Not, see <http: //www.gnu.org/licenses/>."
     End Sub
 
     Private Sub OKButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OKButton.Click
