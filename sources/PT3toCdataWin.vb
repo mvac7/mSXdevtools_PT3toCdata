@@ -126,13 +126,13 @@ Public Class PT3toCdataWin
 
     Private Sub GenerateData()
 
-        Dim aMSXDataFormat As New MSXDataFormat
+        Dim aDataFormat As New DataFormat
 
         Dim labelName As String = Me.LabelTextBox.Text
 
         Dim comments As New ArrayList
 
-        Dim outputData As Byte()
+        Dim outputData() As Byte
 
         Dim fileOutputSize As Integer
         Dim initValue As Integer = 0
@@ -169,7 +169,7 @@ Public Class PT3toCdataWin
             comments.Add("Not contain the 100 Byte header")
         End If
 
-        OutputText.Text += aMSXDataFormat.C_codeGen(outputData, 16, MSXDataFormat.DataFormat.HEXADECIMAL_0xnn, labelName, comments, "const char")
+        OutputText.Text += aDataFormat.GetCcode(outputData, 16, DataFormat.DataType.HEXADECIMAL_0xnn, labelName, comments, "const char")
 
     End Sub
 
