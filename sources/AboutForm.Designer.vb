@@ -73,7 +73,7 @@ Partial Class AboutForm
         'LabelProductName
         '
         Me.LabelProductName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LabelProductName.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelProductName.Font = New System.Drawing.Font("Verdana", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelProductName.Location = New System.Drawing.Point(8, 0)
         Me.LabelProductName.Margin = New System.Windows.Forms.Padding(8, 0, 4, 0)
         Me.LabelProductName.Name = "LabelProductName"
@@ -110,11 +110,12 @@ Partial Class AboutForm
         Me.LabelLicense.Size = New System.Drawing.Size(408, 28)
         Me.LabelLicense.TabIndex = 98
         Me.LabelLicense.TabStop = True
-        Me.LabelLicense.Text = "GNU GPL v2"
+        Me.LabelLicense.Text = "GNU GPL v3"
         '
         'TextBoxDescription
         '
         Me.TextBoxDescription.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.TextBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBoxDescription.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TextBoxDescription.ForeColor = System.Drawing.Color.Black
         Me.TextBoxDescription.Location = New System.Drawing.Point(8, 121)
@@ -123,7 +124,7 @@ Partial Class AboutForm
         Me.TextBoxDescription.Name = "TextBoxDescription"
         Me.TextBoxDescription.ReadOnly = True
         Me.TextBoxDescription.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBoxDescription.Size = New System.Drawing.Size(408, 231)
+        Me.TextBoxDescription.Size = New System.Drawing.Size(408, 227)
         Me.TextBoxDescription.TabIndex = 99
         Me.TextBoxDescription.TabStop = False
         Me.TextBoxDescription.Text = resources.GetString("TextBoxDescription.Text")
@@ -133,9 +134,10 @@ Partial Class AboutForm
         Me.OKButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.OKButton.BackColor = System.Drawing.Color.LightGray
         Me.OKButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.OKButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.OKButton.ForeColor = System.Drawing.Color.Black
         Me.OKButton.Location = New System.Drawing.Point(316, 358)
-        Me.OKButton.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.OKButton.Margin = New System.Windows.Forms.Padding(4, 7, 4, 3)
         Me.OKButton.Name = "OKButton"
         Me.OKButton.Size = New System.Drawing.Size(100, 25)
         Me.OKButton.TabIndex = 1

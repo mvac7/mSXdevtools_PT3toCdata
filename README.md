@@ -3,7 +3,7 @@
 ```
 Author:       mvac7 (aka aorante)
 Architecture: Microsoft .Net framework 4.0
-License:      GNU GPL v2  
+License:      GNU GPL v3 
 ```
 
 ## Sorry! This text is pending correction of the English translation
@@ -28,7 +28,7 @@ This tool is part of the [MSX fR3eL Project](https://github.com/mvac7/SDCC_MSX_f
 Enjoy it!
 
 
-![PT3toCdata_v102b_screenshot01](https://raw.githubusercontent.com/mvac7/mSXdevtools_PT3toCdata/main/_GFX/PT3toCdata_v102b_screenshot01.png)
+![PT3toCdata_v102b_screenshot01](https://raw.githubusercontent.com/mvac7/mSXdevtools_PT3toCdata/main/GFX/PT3toCdata_v105beta_screenshot00.png)
 
 
 
@@ -40,15 +40,14 @@ Enjoy it!
 
 Copyright (C) 2022 mvac7 (aka aorante)
 
-This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License
-as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
-without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 See the GNU General Public License for more details.
 
-You should have received a copy of the GNU General Public License along with this program.
-If not, see <http://www.gnu.org/licenses/>.
+You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
  
 <br/>

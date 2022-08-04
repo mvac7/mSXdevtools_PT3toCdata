@@ -4,21 +4,23 @@ Imports System.Windows.Forms
 
 ''' <summary>
 ''' PT3toCdata Converter Tool
-''' Copyright mvac7 (aka aorante) 2021
+''' Copyright 2022 mvac7 (aka aorante) 
 ''' 
 ''' Vortex PT3 to C data Converter Tool for PT3 Player MSX SDCC Library (fR3eL Project) 
 ''' or other libraries (that use the same generated data format).
 ''' 
 ''' Vortex Tracker And Vortex PT3 Player are developed by Sergey Bulba.
+'''
+''' License:
+''' This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License 
+''' as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 ''' 
-''' This program Is free software; you can redistribute it And/Or modify it under the terms Of 
-''' the GNU General Public License As published by the Free Software Foundation; either version 2 Of the License, Or (at your Option) any later version.
+''' This program is distributed in the hope that it will be useful, 
+''' but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+''' See the GNU General Public License for more details.
 ''' 
-''' This program Is distributed In the hope that it will be useful, but WITHOUT ANY WARRANTY; 
-''' without even the implied warranty Of MERCHANTABILITY Or FITNESS For A PARTICULAR PURPOSE.  See the GNU General Public License For more details.
-''' 
-''' You should have received a copy Of the GNU General Public License along With this program.  
-''' If Not, see www.gnu.org/licenses/
+''' You should have received a copy of the GNU General Public License along with this program.    
+''' If not, see http://www.gnu.org/licenses/
 ''' 
 ''' </summary>
 Public Class PT3toCdataWin
@@ -39,7 +41,11 @@ Public Class PT3toCdataWin
 
 
     Private Sub PT3toCdataWin_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        About()
+
         SetTitle("")
+
     End Sub
 
 
@@ -317,6 +323,11 @@ Public Class PT3toCdataWin
 
 
     Private Sub AboutButton_Click(sender As Object, e As EventArgs) Handles AboutButton.Click
+        About()
+    End Sub
+
+
+    Private Sub About()
         Dim aboutWin As New AboutForm()
         aboutWin.ShowDialog(Me)
     End Sub

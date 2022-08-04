@@ -35,7 +35,6 @@ Partial Class PT3toCdataWin
         Me.NoteTableLabel = New System.Windows.Forms.Label()
         Me.LabelTextBox = New System.Windows.Forms.TextBox()
         Me.LabelLabel = New System.Windows.Forms.Label()
-        Me.OutputData_GroupBox = New System.Windows.Forms.GroupBox()
         Me.SaveAsButton = New System.Windows.Forms.Button()
         Me.CopyAllButton = New System.Windows.Forms.Button()
         Me.OutputText = New System.Windows.Forms.TextBox()
@@ -45,10 +44,7 @@ Partial Class PT3toCdataWin
         Me.AboutButton = New System.Windows.Forms.Button()
         Me.Load_Button = New System.Windows.Forms.Button()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Config_GroupBox.SuspendLayout()
-        Me.OutputData_GroupBox.SuspendLayout()
-        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -69,7 +65,7 @@ Partial Class PT3toCdataWin
         Me.Name_TextBox.Name = "Name_TextBox"
         Me.Name_TextBox.ReadOnly = True
         Me.Name_TextBox.Size = New System.Drawing.Size(310, 22)
-        Me.Name_TextBox.TabIndex = 1
+        Me.Name_TextBox.TabIndex = 2
         Me.ToolTip1.SetToolTip(Me.Name_TextBox, "up to 32 characters")
         '
         'Author_TextBox
@@ -81,7 +77,7 @@ Partial Class PT3toCdataWin
         Me.Author_TextBox.Name = "Author_TextBox"
         Me.Author_TextBox.ReadOnly = True
         Me.Author_TextBox.Size = New System.Drawing.Size(310, 22)
-        Me.Author_TextBox.TabIndex = 2
+        Me.Author_TextBox.TabIndex = 3
         Me.ToolTip1.SetToolTip(Me.Author_TextBox, "up to 32 characters")
         '
         'Label2
@@ -101,7 +97,7 @@ Partial Class PT3toCdataWin
         Me.HeaderCheckBox.Location = New System.Drawing.Point(228, 86)
         Me.HeaderCheckBox.Name = "HeaderCheckBox"
         Me.HeaderCheckBox.Size = New System.Drawing.Size(187, 18)
-        Me.HeaderCheckBox.TabIndex = 4
+        Me.HeaderCheckBox.TabIndex = 6
         Me.HeaderCheckBox.Text = "Extract 100 Bytes Header"
         Me.HeaderCheckBox.UseVisualStyleBackColor = True
         '
@@ -111,7 +107,7 @@ Partial Class PT3toCdataWin
         Me.SongInfo_CheckBox.Location = New System.Drawing.Point(228, 113)
         Me.SongInfo_CheckBox.Name = "SongInfo_CheckBox"
         Me.SongInfo_CheckBox.Size = New System.Drawing.Size(211, 18)
-        Me.SongInfo_CheckBox.TabIndex = 5
+        Me.SongInfo_CheckBox.TabIndex = 7
         Me.SongInfo_CheckBox.Text = "Add Name and Author strings"
         Me.SongInfo_CheckBox.UseVisualStyleBackColor = True
         '
@@ -135,7 +131,7 @@ Partial Class PT3toCdataWin
         Me.Config_GroupBox.Size = New System.Drawing.Size(490, 164)
         Me.Config_GroupBox.TabIndex = 8
         Me.Config_GroupBox.TabStop = False
-        Me.Config_GroupBox.Text = "Output config"
+        Me.Config_GroupBox.Text = "Config PT3 file"
         '
         'NoteTableTextBox
         '
@@ -146,7 +142,7 @@ Partial Class PT3toCdataWin
         Me.NoteTableTextBox.Name = "NoteTableTextBox"
         Me.NoteTableTextBox.ReadOnly = True
         Me.NoteTableTextBox.Size = New System.Drawing.Size(97, 22)
-        Me.NoteTableTextBox.TabIndex = 69
+        Me.NoteTableTextBox.TabIndex = 4
         Me.NoteTableTextBox.Text = "0"
         Me.NoteTableTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.ToolTip1.SetToolTip(Me.NoteTableTextBox, "up to 16 characters")
@@ -168,7 +164,7 @@ Partial Class PT3toCdataWin
         Me.LabelTextBox.MaxLength = 16
         Me.LabelTextBox.Name = "LabelTextBox"
         Me.LabelTextBox.Size = New System.Drawing.Size(97, 22)
-        Me.LabelTextBox.TabIndex = 3
+        Me.LabelTextBox.TabIndex = 5
         Me.LabelTextBox.Text = "SONG00"
         Me.ToolTip1.SetToolTip(Me.LabelTextBox, "up to 16 characters")
         '
@@ -181,47 +177,36 @@ Partial Class PT3toCdataWin
         Me.LabelLabel.Text = "Field name:"
         Me.LabelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'OutputData_GroupBox
-        '
-        Me.OutputData_GroupBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.OutputData_GroupBox.Controls.Add(Me.SaveAsButton)
-        Me.OutputData_GroupBox.Controls.Add(Me.CopyAllButton)
-        Me.OutputData_GroupBox.Controls.Add(Me.OutputText)
-        Me.OutputData_GroupBox.Location = New System.Drawing.Point(12, 182)
-        Me.OutputData_GroupBox.Name = "OutputData_GroupBox"
-        Me.OutputData_GroupBox.Size = New System.Drawing.Size(700, 300)
-        Me.OutputData_GroupBox.TabIndex = 9
-        Me.OutputData_GroupBox.TabStop = False
-        Me.OutputData_GroupBox.Text = "Output Data"
-        '
         'SaveAsButton
         '
         Me.SaveAsButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SaveAsButton.BackColor = System.Drawing.Color.Silver
+        Me.SaveAsButton.BackColor = System.Drawing.Color.LightBlue
+        Me.SaveAsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SaveAsButton.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SaveAsButton.Image = Global.mSXdevtools.PT3toCdata.My.Resources.Resources.save3_x24
         Me.SaveAsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.SaveAsButton.Location = New System.Drawing.Point(458, 263)
+        Me.SaveAsButton.Location = New System.Drawing.Point(476, 454)
         Me.SaveAsButton.Name = "SaveAsButton"
         Me.SaveAsButton.Padding = New System.Windows.Forms.Padding(2, 5, 3, 3)
         Me.SaveAsButton.Size = New System.Drawing.Size(123, 32)
-        Me.SaveAsButton.TabIndex = 7
+        Me.SaveAsButton.TabIndex = 9
         Me.SaveAsButton.Text = "Save PT3.h"
         Me.SaveAsButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ToolTip1.SetToolTip(Me.SaveAsButton, "Save source code")
         Me.SaveAsButton.UseVisualStyleBackColor = False
         '
         'CopyAllButton
         '
         Me.CopyAllButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CopyAllButton.BackColor = System.Drawing.Color.Silver
+        Me.CopyAllButton.BackColor = System.Drawing.Color.PaleGreen
+        Me.CopyAllButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CopyAllButton.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CopyAllButton.Location = New System.Drawing.Point(587, 263)
+        Me.CopyAllButton.Location = New System.Drawing.Point(605, 454)
         Me.CopyAllButton.Name = "CopyAllButton"
         Me.CopyAllButton.Size = New System.Drawing.Size(107, 32)
-        Me.CopyAllButton.TabIndex = 8
+        Me.CopyAllButton.TabIndex = 10
         Me.CopyAllButton.Text = "Copy All"
+        Me.ToolTip1.SetToolTip(Me.CopyAllButton, "Copy source code to clipboard")
         Me.CopyAllButton.UseVisualStyleBackColor = False
         '
         'OutputText
@@ -229,13 +214,14 @@ Partial Class PT3toCdataWin
         Me.OutputText.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.OutputText.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.OutputText.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OutputText.Location = New System.Drawing.Point(18, 21)
+        Me.OutputText.Location = New System.Drawing.Point(12, 192)
         Me.OutputText.Multiline = True
         Me.OutputText.Name = "OutputText"
         Me.OutputText.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.OutputText.Size = New System.Drawing.Size(676, 236)
-        Me.OutputText.TabIndex = 6
+        Me.OutputText.Size = New System.Drawing.Size(700, 250)
+        Me.OutputText.TabIndex = 8
         '
         'OpenFileDialog1
         '
@@ -254,7 +240,7 @@ Partial Class PT3toCdataWin
         Me.AboutButton.Location = New System.Drawing.Point(680, 17)
         Me.AboutButton.Name = "AboutButton"
         Me.AboutButton.Size = New System.Drawing.Size(32, 32)
-        Me.AboutButton.TabIndex = 71
+        Me.AboutButton.TabIndex = 0
         Me.ToolTip1.SetToolTip(Me.AboutButton, "About this App")
         Me.AboutButton.UseVisualStyleBackColor = True
         '
@@ -264,25 +250,18 @@ Partial Class PT3toCdataWin
         Me.Load_Button.Location = New System.Drawing.Point(29, 32)
         Me.Load_Button.Name = "Load_Button"
         Me.Load_Button.Size = New System.Drawing.Size(126, 126)
-        Me.Load_Button.TabIndex = 0
+        Me.Load_Button.TabIndex = 1
         Me.ToolTip1.SetToolTip(Me.Load_Button, "File dialog for loading PT3 files." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "You can also drag and drop on the window.")
         Me.Load_Button.UseVisualStyleBackColor = True
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
+        Me.StatusStrip1.BackColor = System.Drawing.Color.Transparent
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 489)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(724, 22)
         Me.StatusStrip1.TabIndex = 70
         Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'ToolStripStatusLabel1
-        '
-        Me.ToolStripStatusLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(71, 17)
-        Me.ToolStripStatusLabel1.Text = "mSXdevtool"
         '
         'PT3toCdataWin
         '
@@ -291,10 +270,12 @@ Partial Class PT3toCdataWin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightGray
         Me.ClientSize = New System.Drawing.Size(724, 511)
+        Me.Controls.Add(Me.OutputText)
+        Me.Controls.Add(Me.SaveAsButton)
         Me.Controls.Add(Me.AboutButton)
+        Me.Controls.Add(Me.CopyAllButton)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.Load_Button)
-        Me.Controls.Add(Me.OutputData_GroupBox)
         Me.Controls.Add(Me.Config_GroupBox)
         Me.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.Black
@@ -305,10 +286,6 @@ Partial Class PT3toCdataWin
         Me.Text = "PT3toCdata"
         Me.Config_GroupBox.ResumeLayout(False)
         Me.Config_GroupBox.PerformLayout()
-        Me.OutputData_GroupBox.ResumeLayout(False)
-        Me.OutputData_GroupBox.PerformLayout()
-        Me.StatusStrip1.ResumeLayout(False)
-        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -321,7 +298,6 @@ Partial Class PT3toCdataWin
     Friend WithEvents HeaderCheckBox As CheckBox
     Friend WithEvents SongInfo_CheckBox As CheckBox
     Friend WithEvents Config_GroupBox As GroupBox
-    Friend WithEvents OutputData_GroupBox As GroupBox
     Friend WithEvents SaveAsButton As Button
     Friend WithEvents CopyAllButton As Button
     Friend WithEvents OutputText As TextBox
@@ -332,7 +308,6 @@ Partial Class PT3toCdataWin
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents StatusStrip1 As StatusStrip
-    Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
     Friend WithEvents AboutButton As Button
     Friend WithEvents NoteTableTextBox As TextBox
     Friend WithEvents NoteTableLabel As Label
