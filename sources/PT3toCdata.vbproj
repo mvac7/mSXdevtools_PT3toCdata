@@ -73,10 +73,10 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutForm.Designer.vb">
-      <DependentUpon>AboutForm.vb</DependentUpon>
+    <Compile Include="AboutWin.Designer.vb">
+      <DependentUpon>AboutWin.vb</DependentUpon>
     </Compile>
-    <Compile Include="AboutForm.vb">
+    <Compile Include="AboutWin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DataFormat.vb" />
@@ -105,8 +105,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AboutForm.resx">
-      <DependentUpon>AboutForm.vb</DependentUpon>
+    <EmbeddedResource Include="AboutWin.resx">
+      <DependentUpon>AboutWin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PT3toCdataWin.resx">
       <DependentUpon>PT3toCdataWin.vb</DependentUpon>
@@ -137,6 +137,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="PT3toCdata.ico" />
+    <None Include="Resources\new_24.png" />
+    <None Include="Resources\button_savesource.png" />
+    <None Include="Resources\button_CopyAll.png" />
+    <None Include="Resources\PT3toCdata_logo.png" />
+    <None Include="Resources\panel_configPT3.png" />
     <None Include="Resources\BG_bluewhite.png" />
     <None Include="Resources\PT3toC_icon01_128.png" />
     <None Include="_GFX\PT3toC_icon01_128.png" />
