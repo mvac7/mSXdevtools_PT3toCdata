@@ -47,15 +47,14 @@ Public Class PT3toCdataWin
 
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
 
+
     End Sub
 
     Private Sub PT3toCdataWin_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-        About()
+        'About()
 
-        SetTitle("")
-
-        ShowHelptext()
+        NewProject()
 
         ' draw gradient in window-form background
         'Dim gradientBG As New Bitmap(Me.Width, Me.Height)
@@ -64,6 +63,28 @@ Public Class PT3toCdataWin
         'oneGraphic.FillRectangle(newBrush, New RectangleF(0, 0, gradientBG.Width, gradientBG.Height))
         'Me.BackgroundImage = gradientBG
 
+    End Sub
+
+
+
+    Private Sub NewProject()
+        SetTitle("")
+
+        OutputToolsPanel.Enabled = False
+
+        Me.PT3_Path = ""
+        Me.TrackerName = ""
+        Me.SongName = ""
+        Me.SongAuthor = ""
+        Me.SongNoteTable = 0
+
+        ProjectNameTextBox.Text = ""
+
+        Name_TextBox.Text = ""
+        Author_TextBox.Text = ""
+        NoteTableTextBox.Text = ""
+
+        ShowHelptext()
     End Sub
 
 
@@ -157,7 +178,11 @@ Public Class PT3toCdataWin
         Me.Author_TextBox.Text = Me.SongAuthor
         Me.NoteTableTextBox.Text = CStr(Me.SongNoteTable)
 
+        ProjectNameTextBox.Text = Path.GetFileName(Me.PT3_Path)
+
         GenerateData()
+
+        OutputToolsPanel.Enabled = True
 
     End Sub
 
@@ -253,6 +278,7 @@ Public Class PT3toCdataWin
 
         Me.PT3_FileData = LoadBinary(filePath)
         SetTitle(Path.GetFileName(filePath))
+
         InitFileData()
 
     End Sub
@@ -377,6 +403,26 @@ Public Class PT3toCdataWin
     Private Sub SaveSourceButton_Click(sender As Object, e As EventArgs) Handles SaveSourceButton.Click
         SaveSourceDialog()
     End Sub
+
+    Private Sub NewButton_Click(sender As Object, e As EventArgs) Handles NewButton.Click
+        NewProjectDialog()
+    End Sub
+
+
+    Private Sub NewProjectDialog()
+        Dim MessageWin As New MessageDialog
+        Dim result As DialogResult
+
+        Beep()
+        result = MessageWin.ShowDialog(Me, "New Project", "This option will erase all data." + vbCrLf + "Do you want to continue?", MessageDialog.DIALOG_TYPE.YES_NO) '+ vbCrLf
+
+        If result = DialogResult.Yes Then
+            'RemoveHandlers()
+            NewProject()
+            'AddHandlers()
+        End If
+    End Sub
+
 
 
 

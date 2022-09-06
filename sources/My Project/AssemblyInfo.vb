@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Vortex PT3 to C data Converter Tool for PT3 Player MSX SDCC Library (fR3eL Project) or other libraries (that use the same generated data format).")>
 <Assembly: AssemblyCompany("MSX Comm·unity")>
 <Assembly: AssemblyProduct("PT3toCdata Converter Tool")>
-<Assembly: AssemblyCopyright("by mvac7 (aka aorante)")>
+<Assembly: AssemblyCopyright("Copyright 2022 mvac7 (aka aorante)")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' utilizando el carácter "*", como se muestra a continuación:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.1.0.0")>
-<Assembly: AssemblyFileVersion("1.1.0.0")>
+<Assembly: AssemblyVersion("1.1.1.0")>
+<Assembly: AssemblyFileVersion("1.1.1.0")>
